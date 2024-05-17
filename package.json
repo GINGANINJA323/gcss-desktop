@@ -1,0 +1,11 @@
+{
+  "name": "gcss-electron",
+  "version": "1.0.0",
+  "description": "GUI-based save manager that allows the use of a Git repo for game save storage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "edward82009@hotmail.com",
+  "license": "ISC"
+}
