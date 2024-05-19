@@ -39,6 +39,11 @@ Clone the repo, then open it in your script editor/IDE. Run `npm install` to acq
  - `npm start`: starts the program in electron, similar to a packaged version of the program.
  - `npm run dev`: Starts the program in the browser with live reloading. This can be used to test changes in realtime.
 
+ Additionally, VSCode tasks have been added and can be used to run the above scripts more conveniently. To run VSCode tasks, press `Cmd+p` followed by entering `task ` at which point VSCode should display the list of project tasks:
+
+  - `task Start (prod)`: Equivalent to `npm start`
+  - `task Start (dev)`: Equivalent to `npm run dev`
+
  The program is written primarily in TypeScript, but uses JavaScript for the webpack configs and the electron entrypoint (`public/main.js`).
 
  Webpack configs are seperated for development and live, and can be found in the project's root folder.
