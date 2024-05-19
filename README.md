@@ -1,12 +1,12 @@
 # GCSS Electron
 
-Based on a previous project, the [GCSS](), this program is an Electron based cloud save manager. It allows users to use a Git repo for storing game saves.
+Based on a previous project, the [GCSS](https://github.com/GINGANINJA323/gcss), this program is an Electron based cloud save manager. It allows users to use a Git repo for storing game saves.
 
 ## Basic setup
 
 As this program uses a Git repo to store saves, it will need some setup on Github in order to work. You'll need:
 
-1. A [GitHub]() account
+1. A [GitHub](https://github.com/) account
 2. A private GitHub repository
 3. A GitHub Personal Access Token (see PAT Setup).
 
