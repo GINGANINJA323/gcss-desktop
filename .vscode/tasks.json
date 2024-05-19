@@ -12,6 +12,15 @@
         "label": "Start (dev)",
         "type": "shell",
         "command": "npm run dev",
+      },
+      {
+        "label": "Start (electron)",
+        "type": "shell",
+        "command": "npm run start:electron:dev"
+      },
+      {
+        "label": "Start (electron dev)",
+        "dependsOn": ["Start (dev)", "Start (electron)"]
       }
     ]
   }
