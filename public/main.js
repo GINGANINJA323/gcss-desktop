@@ -13,7 +13,7 @@ function createWindow () {
 
   //load the index.html from a url
   if (process.env.DEV) {
-    win.loadURL('http://localhost:3000');
+    win.loadURL('http://localhost:8080');
   } else {
     win.loadFile('public/index.html');
   }
