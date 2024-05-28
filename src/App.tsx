@@ -1,27 +1,36 @@
 import * as React from 'react';
-import LandingPage from './pages/landing';
+import {LandingPage, StartupPage} from './pages';
 import styled from 'styled-components';
 import Navbar from './components/navbar';
-import SaveManager from './save-manager/save-manager';
+import { useDispatch, useSelector } from 'react-redux';
+import { StateType } from './store/types';
+import { getSettingsFromFile } from './store/userSlice';
 
 const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
-
-
 const App = (): JSX.Element => {
-    const SaveManagerContext = React.createContext<SaveManager | null>(null);
-    const [userSettings, setUserSettings] = React.useState(new SaveManager());
+    const dispatch = useDispatch();
+    const loading = useSelector((state: StateType) => state.base.loading);
+    const firstStartup = useSelector((state: StateType) => state.user.firstStartup);
+
+    React.useEffect(() => {
+        // Call to init the program
+        // @ts-ignore - some type issue with AsyncThunks, fix later
+        dispatch(getSettingsFromFile());
+    })
+
+    if (firstStartup) {
+        // TODO: pre-boarding, get user details and write them back
+    }
 
     return (
-        <SaveManagerContext.Provider value={userSettings}>
-            <MainContainer>
-                <Navbar />
-                <LandingPage />
-            </MainContainer>
-        </SaveManagerContext.Provider>
+        <MainContainer>
+            <Navbar />
+            <LandingPage />
+        </MainContainer>
     );
 }
 
