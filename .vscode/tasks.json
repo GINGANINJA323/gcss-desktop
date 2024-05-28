@@ -6,12 +6,12 @@
       {
         "label": "Start (prod)",
         "type": "shell",
-        "command": "npm start",
+        "command": "npm start"
       },
       {
         "label": "Start (dev)",
         "type": "shell",
-        "command": "npm run dev",
+        "command": "npm run dev"
       },
       {
         "label": "Start (electron)",
@@ -20,7 +20,11 @@
       },
       {
         "label": "Start (electron dev)",
-        "dependsOn": ["Start (dev)", "Start (electron)"]
+        "dependsOn": [
+          "Start (dev)",
+          "Start (electron)"
+        ],
+        "problemMatcher": []
       }
     ]
   }

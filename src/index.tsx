@@ -9,4 +9,3 @@ if (!rootElement) throw new Error('Failed to get the root element');
 const root = createRoot(rootElement);
 
 root.render(<App />);
-
